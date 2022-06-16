@@ -1,0 +1,86 @@
+@import "../../media/styles/mixins";
+@import "../../media/styles/variables";
+
+.posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card-block {
+    width: 70%;
+    min-height: 600px;
+    display: flex;
+
+
+    // https://stackoverflow.com/questions/20039765/how-to-apply-a-css-filter-to-a-background-image
+    &__img {
+      flex: 2;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .background-img {
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 80vh;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+      }
+
+      .content-img {
+        position: fixed;
+        max-width: 500px;
+        height: 400px;
+        z-index: 9999;
+        margin-right: 20px;
+      }
+    }
+
+    &__post {
+      flex: 1 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 15px;
+      background-color: #ebe9e7;
+      color: #848383;
+
+      &-title {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+          margin-left: 10px;
+          border-radius: 15px;
+        }
+      }
+
+      &-footer {
+        color: #515356;
+      }
+
+      &-footer-likes {
+        display: flex;
+
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__post-description-title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}

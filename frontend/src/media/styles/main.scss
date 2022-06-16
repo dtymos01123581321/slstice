@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f8fb;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+.App {
+  min-width: 960px;
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  justify-content: center;
+}
